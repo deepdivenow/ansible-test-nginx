@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/thienngho/ansible-role-nginx.svg?branch=master)](https://travis-ci.org/thienngho/ansible-role-nginx)
+[![Build Status](https://travis-ci.org/deepdivenow/ansible-test-nginx.svg?branch=master)](https://travis-ci.org/deepdivenow/ansible-test-nginx)
 
 Nginx
 =========
