@@ -1,13 +1,7 @@
 ---
 
 - name: Install Nginx
-  apt:
-    name: nginx
-    update_cache: yes
-    state: present
+  package:  name='nginx'
 
 - name: Ensure nginx is started and enabled to start at boot.
-  service:
-    name: nginx
-    state: started
-    enabled: yes
+  service: name='nginx' state='started' enabled='yes'
