@@ -1,7 +1,7 @@
 ---
 
 - name: Install Nginx
-  package:  name='nginx'
+  package: name='nginx'
 
 - name: Ensure nginx is started and enabled to start at boot.
   service: name='nginx' state='started' enabled='yes'
