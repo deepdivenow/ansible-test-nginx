@@ -13,8 +13,5 @@ install:
   - pip install molecule docker
 script:
   - molecule test -s centos
-  - echo DOCKER && docker ps
   - molecule test -s ubuntu
-  - echo DOCKER && docker ps
   - molecule test -s debian
-  - echo DOCKER && docker ps
