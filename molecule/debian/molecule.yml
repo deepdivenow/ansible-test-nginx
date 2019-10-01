@@ -1,0 +1,33 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: debian8
+    image: debian:8
+    privileged: True
+    command: /sbin/init
+  - name: debian9
+    image: deepdivenow/debian9-sshd:0.1
+    pre_build_image: True
+    privileged: True
+    command: /lib/systemd/systemd
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+provisioner:
+  name: ansible
+  log: true
+  lint:
+    name: ansible-lint
+scenario:
+  name: debian
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
