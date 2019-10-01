@@ -12,6 +12,7 @@ platforms:
     command: /sbin/init
   - name: ubuntu1804
     image: deepdivenow/ubuntu1804-sshd:0.4
+    pre_build_image: True
     privileged: True
     command: /sbin/init
     tmpfs:
@@ -25,6 +26,7 @@ platforms:
     command: /sbin/init
   - name: debian9
     image: deepdivenow/debian9-sshd:0.1
+    pre_build_image: True
     privileged: True
     command: /lib/systemd/systemd
     tmpfs:
@@ -34,6 +36,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
   - name: centos7
     image: deepdivenow/centos7-sshd:0.12
+    pre_build_image: True
     privileged: True
     command: /sbin/init
     tmpfs:
